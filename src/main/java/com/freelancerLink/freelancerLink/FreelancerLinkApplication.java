@@ -8,6 +8,7 @@ public class FreelancerLinkApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FreelancerLinkApplication.class, args);
+		System.out.print("");
 	}
 
 }
