@@ -22,7 +22,7 @@ public class FirebaseInitialization {
         try {
             String currDir = FirebaseInitialization.class.getResource(".").getPath();
             System.out.println(currDir);
-            serviceAccount = new FileInputStream("./freelancerlink-85e18-firebase-adminsdk-t89x6-4ac3fab916.json");
+            serviceAccount = new FileInputStream("./freelancerlink-85e18-firebase-adminsdk-t89x6-3791055974.json");
 
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
