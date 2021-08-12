@@ -10,5 +10,4 @@ public class FreelancerLinkApplication {
 		SpringApplication.run(FreelancerLinkApplication.class, args);
 		System.out.print("");
 	}
-
 }
