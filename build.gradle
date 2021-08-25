@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.freelancerLink'
+group = 'com'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -26,6 +26,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+	implementation 'junit:junit:4.12'
+	implementation group: 'io.mateu', name: 'lombok', version: '1.18.11.97'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
