@@ -1,6 +1,6 @@
 package com.freelancerLink.controller;
 
-import com.freelancerLink.web.dto.AccountInfoDto;
+import com.freelancerLink.entity.AccountInfoDto;
 import org.springframework.web.bind.annotation.*;
 
 /***

@@ -1,6 +1,6 @@
 package com.freelancerLink.dto;
 
-import com.freelancerLink.web.dto.AccountInfoDto;
+import com.freelancerLink.entity.AccountInfoDto;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
