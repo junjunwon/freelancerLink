@@ -10,6 +10,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 public class Posts {
+    /**
+     * Request/Response 클래스로 사용해서는 안된다.
+     * Entity 클래스는 DB와 맞닿은 핵심 클래스로 테이블이 생성되고 스키마가 변경된다.
+     * View Layer와 DB Layer의 역할 분리를 철저히!
+     *
+     */
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

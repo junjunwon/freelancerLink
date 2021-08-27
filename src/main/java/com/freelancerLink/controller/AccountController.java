@@ -1,6 +1,7 @@
 package com.freelancerLink.controller;
 
 import com.freelancerLink.entity.AccountInfoDto;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 /***
@@ -8,8 +9,9 @@ import org.springframework.web.bind.annotation.*;
     - controller which returns JSON is changed from basic Controller
     - each method doesn't have to delcare @ResponseBody with @RestController
  ***/
+
+@RequiredArgsConstructor
 @RestController
-//@RequestMapping("/api")
 public class AccountController {
 //    @Autowired
 //    private AccountService accountService;
@@ -23,10 +25,6 @@ public class AccountController {
 //        return "saveAccount";
 //    }
 
-    @GetMapping("/hello")
-    public String hello(){
-        return "hello";
-    }
 
     @GetMapping("/hello/dto")
     public AccountInfoDto accountInfoDto(@RequestParam("name") String name,
