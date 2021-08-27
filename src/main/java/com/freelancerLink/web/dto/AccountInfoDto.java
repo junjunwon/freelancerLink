@@ -1,4 +1,4 @@
-package com.freelancerLink.entity;
+package com.freelancerLink.web.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
