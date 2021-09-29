@@ -4,6 +4,7 @@ package com.freelancerLink.web;
 import com.freelancerLink.domain.post.Posts;
 import com.freelancerLink.domain.post.PostsRepository;
 import com.freelancerLink.web.dto.PostsSaveRequestDto;
+import com.freelancerLink.web.dto.PostsUpdateRequestDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -62,4 +63,25 @@ public class PostApiControllerTest {
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
 
+    @Test
+    public void Posts_modify() throws Exception {
+        //given
+        Posts savedPosts = postsRepository.save(Posts.builder()
+                .title("title")
+                .content("content")
+                .author("author")
+                .build());
+
+        Long updateId = savedPosts.getId();
+        String expectedTitle = "title2";
+        String expectedContent = "content2";
+
+        PostsUpdateRequestDto requestDto =
+                    PostsUpdateRequestDto.builder()
+                            .title(expectedTitle)
+                            .content(expectedContent)
+                            .build();
+
+
+    }
 }

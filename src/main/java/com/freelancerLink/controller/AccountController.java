@@ -1,6 +1,5 @@
 package com.freelancerLink.controller;
 
-import com.freelancerLink.entity.AccountInfoDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,9 +25,9 @@ public class AccountController {
 //    }
 
 
-    @GetMapping("/hello/dto")
-    public AccountInfoDto accountInfoDto(@RequestParam("name") String name,
-                                         @RequestParam("address") String address){
-        return new AccountInfoDto(name, address);
-    }
+//    @GetMapping("/hello/dto")
+//    public AccountInfoDto accountInfoDto(@RequestParam("name") String name,
+//                                         @RequestParam("address") String address){
+//        return new AccountInfoDto(name, address);
+//    }
 }

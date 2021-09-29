@@ -36,6 +36,11 @@ public class Posts {
         this.author = author;
     }
 
+    public void update(String title, String content ){
+        this.title=title;
+        this.content = content;
+    }
+
     /**
      * setter의 무작정 생성 제한
      * 차후 기능 변경 시 해당 클래스의 인스턴스 값들이 언제 어디서 변해야 하는지 코드상으로 명확히 구분할 수가 없다.
