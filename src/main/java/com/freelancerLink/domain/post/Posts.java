@@ -1,5 +1,6 @@
 package com.freelancerLink.domain.post;
 
+import com.freelancerLink.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
     /**
      * Request/Response 클래스로 사용해서는 안된다.
      * Entity 클래스는 DB와 맞닿은 핵심 클래스로 테이블이 생성되고 스키마가 변경된다.

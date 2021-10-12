@@ -1,6 +1,8 @@
 package com.freelancerLink.controller;
 
+import com.freelancerLink.domain.user.UserInfo;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /***
@@ -30,4 +32,10 @@ public class AccountController {
 //                                         @RequestParam("address") String address){
 //        return new AccountInfoDto(name, address);
 //    }
+
+    @GetMapping("/api/login")
+    public String login(){
+        System.out.print("test return1");
+        return "got return data!!!!";
+    }
 }
