@@ -50,7 +50,9 @@
                     Password</a>
                 </div>
                 <div class="float-right">
-                  <b-button variant="primary" size="lg" @click="login">Login to Dashboard</b-button>
+                  <b-button variant="primary" size="lg" @click="login">Login</b-button>
+                  <b-button variant="primary" size="lg" href="/oauth2/authorization/google">Google Login to Board</b-button>
+                  <b-button variant="primary" size="lg" href="/logout">로그아웃</b-button>
                 </div>
               </div>
             </div>
@@ -87,8 +89,18 @@ export default {
           .catch((ex)=>{
             console.error("failed login", ex)
           })
-
+    },
+    googleLogin(){
+      //
+      this.$axios.post("/oauth2/authorization/google")
+      .then(()=>{
+        console.log("login success!!");
+      })
+      .catch((ex)=>{
+        console.error("google login is failed : "+ex);
+      })
     }
+
   }
 }
 </script>
