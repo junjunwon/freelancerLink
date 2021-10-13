@@ -36,19 +36,11 @@ export default {
             this.$axios.post('/api/v1/posts', this.board)
             .then(() => {
               alert("post success !!");
-                // this.$router.push('/board')
+              this.$router.push('/board/list')
             })
             .catch((ex) => {
                 console.error("failed write article", ex)
             })
-
-            this.$axios.get('/board/save')
-              .then((response) => {
-                alert("post success !!"+response.data);
-              })
-              .catch((ex) => {
-                alert("error occur!!" + ex);
-              })
 
         }
     },
