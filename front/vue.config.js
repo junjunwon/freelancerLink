@@ -2,6 +2,7 @@ module.exports = {
     runtimeCompiler: true,
     productionSourceMap: false,
     outputDir : '../src/main/resources/static',
+
     devServer : {
         port : 3031,
         proxy : {
@@ -12,7 +13,12 @@ module.exports = {
             }
         }
     },
+
     publicPath: process.env.NODE_ENV === 'production'
         ? './'
-        : '/'
+        : '/',
+
+    transpileDependencies: [
+      'vuetify'
+    ]
 }
